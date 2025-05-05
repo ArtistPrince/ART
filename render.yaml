@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: art-style-converter
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python back.py  # Change to python app.py if that's your actual file
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    autoDeploy: true
